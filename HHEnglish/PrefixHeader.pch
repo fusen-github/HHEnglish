@@ -1,0 +1,32 @@
+//
+//  PrefixHeader.pch
+//  HHEnglish
+//
+//  Created by 付森 on 2018/12/29.
+//  Copyright © 2018年 付森. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIView+HUD.h"
+
+#define UIColorFromRGB(value) [UIColor colorWithRed:((float)((value & 0xFF0000) >> 16)) / 255.0 green:((float)((value & 0x00FF00) >> 8)) / 255.0 blue:((float)((value & 0x0000FF) >> 0)) / 255.0 alpha:1]
+
+#import "UIView+Frame.h"
+
+#define kMainBlueColor UIColorFromRGB(0x1abbfe)
+
+#define NilString(str) str ?: @""
+
+#define NilArray(arr) arr ?: [NSArray array]
+
+#define NilObject(obj) obj ?: [NSNull null]
+
+#define UIColorRandom [UIColor colorWithRed:(arc4random() % 256) / 255.0 green:(arc4random() % 256) / 255.0 blue:(arc4random() % 256) / 255.0 alpha:1]
+
+
+#endif /* PrefixHeader_pch */
